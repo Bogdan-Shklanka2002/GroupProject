@@ -16,5 +16,22 @@ namespace Calculator
         {
             InitializeComponent();
         }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+
+        string Expretion = "";
+        private void bunifuImageButton2_Click(object sender, EventArgs e)
+        {
+            Expretion = "";
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
