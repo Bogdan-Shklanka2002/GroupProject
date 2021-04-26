@@ -24,10 +24,16 @@ namespace CalcClassTests
             Assert.AreEqual(expected, actual);
         }
 
+        [DataSource("System.Data.SqlClient",
+            @"Server=DESKTOP-FHEOHO4\MYSQLSERVER;Database=Tests;Integrated Security=SSPI",
+            "TestsSub",
+            DataAccessMethod.Sequential)]
         [TestMethod]
-        public void TestSub_20_subtract_10_10returned()
+        public void TestSub()
         {
-            long expected = 10;
+            long a = (int)TestContext.DataRow["A"];
+            long b = (int)TestContext.DataRow["B"];
+            long expected = (int)TestContext.DataRow["Expected"];
             long actual = Calculations.Sub(a, b);
 
             Assert.AreEqual(expected, actual);
@@ -36,6 +42,8 @@ namespace CalcClassTests
         [TestMethod]
         public void TestMult_20_multiple_10_200returned()
         {
+            long a = 20;
+            long b = 10;
             long expected = 200;
             long actual = Calculations.Mult(a, b);
 
@@ -45,6 +53,8 @@ namespace CalcClassTests
         [TestMethod]
         public void TestDiv_20_divide_10_2returned()
         {
+            long a = 20;
+            long b = 10;
             long expected = 2;
             long actual = Calculations.Div(a, b);
 
@@ -54,6 +64,8 @@ namespace CalcClassTests
         [TestMethod]
         public void TestMod_20_module_10_0returned()
         {
+            long a = 20;
+            long b = 10;
             long expected = 0;
             long actual = Calculations.Mod(a, b);
 
