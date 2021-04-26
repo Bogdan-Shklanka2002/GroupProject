@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+<<<<<<< Updated upstream
+=======
+    <Reference Include="Microsoft.VisualBasic" />
+>>>>>>> Stashed changes
     <Reference Include="Bunifu_UI_v1.5.3">
       <HintPath>D:\wcf_chat\Registration\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
