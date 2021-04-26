@@ -81,9 +81,18 @@ namespace Calculator
 
         private void btnEquals_Click(object sender, EventArgs e)
         {
-            Analizer.AnalizerEx ex = new AnalizerEx(Expretion);
-            LastAns = ex.Evaluate;
-            timerAnimation.Start();
+            try
+            {
+                Analizer.AnalizerEx ex = new AnalizerEx(Expretion);
+                LastAns = ex.Evaluate;
+                timerAnimation.Start();
+
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show("Error");
+            }
+           
         }
 
     }
