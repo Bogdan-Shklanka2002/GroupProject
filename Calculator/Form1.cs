@@ -90,7 +90,7 @@ namespace Calculator
             }
             catch (Exception exception)
             {
-                MessageBox.Show("Error");
+                MessageBox.Show(exception.Message);
             }
            
         }
